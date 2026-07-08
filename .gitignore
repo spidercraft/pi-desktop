@@ -1,0 +1,8 @@
+node_modules/
+__pycache__/
+dist/
+target/
+*.tsbuildinfo
+.DS_Store
+apps/shell/src-tauri/gen/
+apps/shell/src-tauri/binaries/

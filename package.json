@@ -1,0 +1,29 @@
+{
+  "name": "pi-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "workspaces": [
+    "packages/harness-sdk",
+    "packages/protocol",
+    "packages/ui-kit",
+    "apps/pi-host",
+    "apps/ui"
+  ],
+  "scripts": {
+    "build": "npm run build:sdk && npm run build:protocol && npm run build:uikit && npm run build:host && npm run build:ui",
+    "build:sdk": "npm run build -w @pi-desktop/harness-sdk",
+    "build:protocol": "npm run build -w @pi-desktop/protocol",
+    "build:uikit": "npm run build -w @pi-desktop/ui-kit",
+    "build:host": "npm run build -w @pi-desktop/pi-host",
+    "build:host-exe": "npm run build:exe -w @pi-desktop/pi-host",
+    "build:ui": "npm run build -w @pi-desktop/ui",
+    "test": "npm run test -w @pi-desktop/harness-sdk && npm run test -w @pi-desktop/pi-host",
+    "dev:host": "npm run dev -w @pi-desktop/pi-host",
+    "dev:ui": "npm run dev -w @pi-desktop/ui",
+    "shell:debug": "cd apps/shell/src-tauri && cargo build"
+  }
+}

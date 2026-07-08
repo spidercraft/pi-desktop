@@ -1,0 +1,25 @@
+{
+  "name": "@pi-desktop/pi-host",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:exe": "node scripts/build-exe.mjs",
+    "dev": "npm run build && node dist/server.js",
+    "start": "node dist/server.js",
+    "test": "node --test \"dist/__tests__/*.test.js\""
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "^0.80.3",
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "@pi-desktop/harness-sdk": "0.1.0",
+    "@pi-desktop/protocol": "0.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.0",
+    "typescript": "^5.6.0"
+  }
+}

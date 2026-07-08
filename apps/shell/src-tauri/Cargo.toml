@@ -1,0 +1,19 @@
+[package]
+name = "pi-desktop-shell"
+version = "0.1.0"
+description = "Pi Desktop shell — window chrome, sidecar supervision. No business logic."
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-shell = "2"
+
+# Debug profile is the default `cargo build` — kept explicit for clarity.
+[profile.dev]
+opt-level = 0
+debug = true
